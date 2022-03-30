@@ -15,7 +15,7 @@ def callback():
 #create entry boxes
 entry = ttk.Entry(root, width=30) #size of field for entry
 entry2 = ttk.Entry(root, width=30)
-entry.insert(0, "Please enter your name: ") # 0 is the index, first charactter
+entry.insert(0, "Please enter your name: ") #0 is the index, first character
 entry2.insert(0, "Please enter your password: ")
 
 #add a button to the window
@@ -39,7 +39,7 @@ chvar.set(0) #set to 0 (zero) means not checked
 
 #checkbox variable
 cbox = Checkbutton(root, text="Remember Me", variable=chvar,
-                   font="Arial 16").grid(row=4,column=0, sticky=E, columnspan=2) #in order to get it align right
+                   font="Arial 16").grid(row=4,column=0, sticky=E, columnspan=2) #in order to align in to the right
 
 root.geometry("500x450") #size of window
 root.mainloop()
