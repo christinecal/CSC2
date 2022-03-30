@@ -1,8 +1,6 @@
 # Date: Wednesday 30 March
 # Name: Christine Calantog
 
-'''In this program, we will create a function for our button so when you hit the button you can get the values entered.'''
-
 from tkinter import *
 from tkinter import ttk
 
