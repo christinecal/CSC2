@@ -1,7 +1,7 @@
 # Date: Monday 28 March
 # Name: Christine Calantog
 
-#This program shows Grid  Manager - which helps us to organise our widgets easily
+#This program shows Grid Manager - which helps us to organise our widgets easily
 
 from tkinter import *
 from tkinter import ttk
