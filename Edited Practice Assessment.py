@@ -1,4 +1,3 @@
-
 #Date: Wednesday 11 May
 #Name: Christine Calantog
 
@@ -97,3 +96,7 @@ Terms
 Privacy
 Security
 Status
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
