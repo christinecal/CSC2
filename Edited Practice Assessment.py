@@ -17,14 +17,16 @@ def quit():
 
 #print details of all the camps
 def print_camp_details ():
+    #global variables (accessible throughout the program)
     global j_names, total_entries, name_count
     name_count = 0
+    #column headings
     Label(main_window, font='bold',text="Row").grid(column=0,row=7)
     Label(main_window, font='bold',text="Leader").grid(column=1,row=7)
     Label(main_window, font='bold',text="Location").grid(column=2,row=7)
     Label(main_window, font='bold',text="Number of Campers").grid(column=3,row=7)
     Label(main_window, font='bold',text="Weather").grid(column=4,row=7)
-
+    #each row is the item on the list
     while name_count < total_entries :
         Label(main_window, text=name_count).grid(column=0,row=name_count+8) 
         Label(main_window, text=(camp_details[name_count][0])).grid(column=1,row=name_count+8)
@@ -35,6 +37,7 @@ def print_camp_details ():
 
 #add the next camper to the list
 def append_name ():
+    #global variables
     global camp_details, entry_leader,entry_location,entry_campers,entry_weather, total_entries
     if len(entry_leader.get()) != 0 :
         camp_details.append([entry_leader.get(),entry_location.get(),entry_campers.get(),entry_weather.get()])
@@ -46,19 +49,24 @@ def append_name ():
 
 #delete a row from the list
 def delete_row ():
+    #global variables
     global camp_details, delete_item, total_entries, name_count
+    #deleting selected row
     del camp_details[int(delete_item.get())]
     total_entries = total_entries - 1
     delete_item.delete(0,'end')
+    #clear last item displayed
     Label(main_window, text="       ").grid(column=0,row=name_count+7) 
     Label(main_window, text="       ").grid(column=1,row=name_count+7)
     Label(main_window, text="       ").grid(column=2,row=name_count+7)
     Label(main_window, text="       ").grid(column=3,row=name_count+7)
     Label(main_window, text="       ").grid(column=4,row=name_count+7)
+    #print the items as rows
     print_camp_details()
 
 #create the buttons and labels
 def setup_buttons():
+    #global variables
     global camp_details, entry_leader,entry_location,entry_campers,entry_weather, total_entries, delete_item
     Button(main_window, text="Quit",command=quit) .grid(column=1, row=0)
     Button(main_window, text="Append Details",command=append_name) .grid(column=0,row=1)
@@ -82,21 +90,15 @@ def setup_buttons():
 
 #start the program running
 def main():
+    #global variables
     global main_window
     global camp_details, entry_name,entry_age,entry_gender, total_entries
+    #empty variables for entries and list for camp details
     camp_details = []
     total_entries = 0
+    #GUI
     main_window =Tk()
     setup_buttons()
     main_window.mainloop()
     
 main()
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
