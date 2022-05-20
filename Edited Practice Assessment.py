@@ -59,6 +59,16 @@ def check_inputs():
     if len(entry_location.get()) == 0:
         Label(main_window, fg="red", text="Required") .grid(column=2, row=1)
         input_check = 1
+
+    #number of campers cannot be blank, specific to integers 5 to 10
+    #set up an error message
+    if (entry_campers.get().isdigit()):
+        if int(entry_campers.get()) < 5 or int(entry_campers.get()) > 10:
+            Label(main_window, fg="red", text="5-10 only") .grid(column=2, row=2)
+            input_check = 1
+    else:
+        Label(main_window, fg="red", text="5-10 only") .grid(column=2, row=2)
+        input_check = 1
      
 #add the next camper to the list
 def append_name ():
