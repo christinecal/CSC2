@@ -69,7 +69,15 @@ def check_inputs():
     else:
         Label(main_window, fg="red", text="5-10 only") .grid(column=2, row=2)
         input_check = 1
-     
+
+    #weather cannot not blank, specific to strings
+    #set up an error message
+    if len(entry_weather.get()) == 0:
+        Label(main_window, fg="red", text="Required") .grid(column=2, row=3)
+        input_check = 1
+    if input_check == 0:
+        append_name()
+
 #add the next camper to the list
 def append_name ():
     #global variables
