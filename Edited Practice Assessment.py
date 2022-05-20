@@ -21,11 +21,19 @@ def print_camp_details ():
     global j_names, total_entries, name_count
     name_count = 0
     #column headings
+<<<<<<< HEAD
     Label(main_window, font='Helvetica 10 bold',text="Row").grid(column=0,row=7)
     Label(main_window, font='Helvetica 10 bold',text="Leader").grid(column=1,row=7)
     Label(main_window, font='Helvetica 10 bold',text="Location").grid(column=2,row=7)
     Label(main_window, font='Helvetica 10 bold',text="Number of Campers").grid(column=3,row=7)
     Label(main_window, font='Helvetica 10 bold',text="Weather").grid(column=4,row=7)
+=======
+    Label(main_window, font='bold',text="Row").grid(column=0,row=7)
+    Label(main_window, font='bold',text="Leader").grid(column=1,row=7)
+    Label(main_window, font='bold',text="Location").grid(column=2,row=7)
+    Label(main_window, font='bold',text="Number of Campers").grid(column=3,row=7)
+    Label(main_window, font='bold',text="Weather").grid(column=4,row=7)
+>>>>>>> 4785702805644121c0ac0e10976c917928044656
     #each row is the item on the list
     while name_count < total_entries :
         Label(main_window, text=name_count).grid(column=0,row=name_count+8) 
