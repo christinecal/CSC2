@@ -50,10 +50,16 @@ def check_inputs():
 
     #camp leader cannot be blank and is specific to strings
     #set up an error message 
-     if len(entry_leader.get()) == 0:
+    if len(entry_leader.get()) == 0:
         Label(main_window, fg="red", text="Required") .grid(column=2, row=0)
         input_check = 1
 
+    #location cannot be blank and is specific to strings
+    #set up an error message
+    if len(entry_location.get()) == 0:
+        Label(main_window, fg="red", text="Required") .grid(column=2, row=1)
+        input_check = 1
+     
 #add the next camper to the list
 def append_name ():
     #global variables
