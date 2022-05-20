@@ -35,6 +35,25 @@ def print_camp_details ():
         Label(main_window, text=(camp_details[name_count][3])).grid(column=4,row=name_count+8)
         name_count +=  1
 
+#check input data for validity
+#if invalid entry, ask user to enter again
+#if valid entry, program continues 
+
+def check_inputs():
+    #global variables
+    global camp_details, entry_leader, entry_location, entry_campers, entry_weather, total_entries
+    input_check = 0
+    Label(main_window, text="               ") .grid(column=2, row=0)
+    Label(main_window, text="               ") .grid(column=2, row=1)
+    Label(main_window, text="               ") .grid(column=2, row=2)
+    Label(main_window, text="               ") .grid(column=2, row=3)
+
+    #camp leader cannot be blank and is specific to strings
+    #set up an error message 
+     if len(entry_leader.get()) == 0:
+        Label(main_window, fg="red", text="Required") .grid(column=2, row=0)
+        input_check = 1
+
 #add the next camper to the list
 def append_name ():
     #global variables
